@@ -2,6 +2,7 @@ package com.work1.now;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,6 +13,7 @@ public class Pause extends Activity implements OnClickListener{
 	private Button resume;
 	private Button restart;
 	private Button menu;
+	MediaPlayer pause;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,8 @@ public class Pause extends Activity implements OnClickListener{
 		restart.setOnClickListener(this);
 		menu = (Button) findViewById(R.id.bPauseMenu);
 		menu.setOnClickListener(this);
+		pause = MediaPlayer.create(this, R.raw.pause);
+		pause.start();
 	}
 
 	public void onClick(View v) {
