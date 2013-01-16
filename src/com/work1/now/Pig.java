@@ -52,14 +52,14 @@ public class Pig {
 		if (((this.x + x) >= minLeftLoc) && ((this.x + x + width) <= canvas.getWidth())) {
 			this.x += x;
 		}
-		if (((this.y + y) >= minLeftLoc) && ((this.y + y + height) <= canvas.getHeight())) {
+		if (((this.y + y) > 0) && (this.y + y + height) <= canvas.getHeight()) {
 			this.y += y;
 		}
 	}
 	
-	public void increaseMinLeftLoc(float val, Canvas canvas) {
-		if (minLeftLoc + val < (canvas.getWidth() / 2)) {
-			minLeftLoc += val;
+	public void increaseMinLeftLoc(Canvas canvas) {
+		if (minLeftLoc + (canvas.getWidth() / 20) < (canvas.getWidth() / 2)) {
+			minLeftLoc += canvas.getWidth() / 20;
 		}
 	}
 	

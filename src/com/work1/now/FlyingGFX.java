@@ -96,10 +96,6 @@ public class FlyingGFX extends Activity implements OnTouchListener{
 		eatSound = MediaPlayer.create(this, R.raw.oink);
 		bgSound = MediaPlayer.create(this, R.raw.bgm);
 		level = 1;
-		if(isSoundOn) {
-			bgSound.start();
-			bgSound.setLooping(true);
-		}
 	}
 	
 	public void loadResources() {
@@ -144,9 +140,12 @@ public class FlyingGFX extends Activity implements OnTouchListener{
 	protected void onPause() {
 		super.onPause();
 		wl.release();
+		
 		if (isGameOver) {
 			releaseSound();
 			finish();
+		}	else if (bgSound.isPlaying()) {
+			bgSound.pause();
 		}
 		surface.onPause();
 	}
@@ -160,6 +159,10 @@ public class FlyingGFX extends Activity implements OnTouchListener{
 			releaseSound();
 			finish();
 		}	else {
+			if (isSoundOn) {
+				bgSound.start();
+				bgSound.setLooping(true);
+			}
 			surface.onResume();
 		}
 	}
@@ -239,9 +242,6 @@ public class FlyingGFX extends Activity implements OnTouchListener{
 //				}
 //				break;
 //			}
-			if(isSoundOn) {
-				bgSound.pause();
-			}
 			myThread = null;
 		}
 		
@@ -279,7 +279,7 @@ public class FlyingGFX extends Activity implements OnTouchListener{
 					if (wolfProductionRate > 60) {
 						wolfProductionRate--;
 					}
-					
+					charac.increaseMinLeftLoc(canvas);
 					foodType++;
 					addPowerUp(canvas);
 				}
