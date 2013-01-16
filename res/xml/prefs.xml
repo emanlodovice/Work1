@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:defaultValue="Player"
+        android:key="name" />
+    <Preference
+        android:defaultValue="true"
+        android:key="sound" />
+
+</PreferenceScreen>

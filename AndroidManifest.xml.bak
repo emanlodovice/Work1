@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.work1.now"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application
+        android:icon="@drawable/baboy"
+        android:label="@string/app_name" >
+        
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".FlyingGFX"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.work.now.GAME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GameOver"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.work.now.GAMEOVER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		<activity
+            android:name=".Pause"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.work.now.PAUSE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.work.now.MENU" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Notif"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent" >
+            <intent-filter>
+                <action android:name="com.work.now.NOTIF" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:screenOrientation="landscape"
+            android:label="Settings" >
+            <intent-filter>
+                <action android:name="com.work.now.SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HighScore"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.work.now.HIGHSCORE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

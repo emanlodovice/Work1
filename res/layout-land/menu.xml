@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_static"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/icon1"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/bScores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bPlay"
+        android:layout_alignBottom="@+id/bPlay"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/icon3"
+        android:text="High Score" />
+
+    <Button
+        android:id="@+id/bSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/bPlay"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/icon2"
+        android:text="Settings" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:defaultValue="Someone"
+        android:enabled="false"
+        android:key="highscorer1"
+        android:shouldDisableView="true" />
+    <Preference
+        android:defaultValue="0"
+        android:enabled="false"
+        android:key="highest1"
+        android:shouldDisableView="true" />
+    <Preference
+        android:defaultValue="Someone"
+        android:enabled="false"
+        android:key="highscorer2"
+        android:shouldDisableView="true" />
+    <Preference
+        android:defaultValue="0"
+        android:enabled="false"
+        android:key="highest2"
+        android:shouldDisableView="true" />
+    <Preference
+        android:defaultValue="Someone"
+        android:enabled="false"
+        android:key="highscorer3"
+        android:shouldDisableView="true" />
+    <Preference
+        android:defaultValue="0"
+        android:enabled="false"
+        android:key="highest3"
+        android:shouldDisableView="true" />
+
+</PreferenceScreen>
